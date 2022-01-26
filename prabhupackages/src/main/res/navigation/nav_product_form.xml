@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_product_form"
+    app:startDestination="@id/topUpFragment">
+    <fragment
+        android:id="@+id/topUpFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.topup.TopUpFragment"
+        android:label="Top Up"
+        tools:layout="@layout/fragment_top_up" />
+    <fragment
+        android:id="@+id/comingSoonFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.ComingSoonFragment"
+        android:label="Coming oon"
+        tools:layout="@layout/fragment_coming_soon" />
+    <fragment
+        android:id="@+id/directFormFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.form.DirectFormFragment"
+        android:label="Direct Form"
+        tools:layout="@layout/fragment_direct_form" />
+    <fragment
+        android:id="@+id/indirectFormFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.form.IndirectFormFragment"
+        android:label="Indirect Form"
+        tools:layout="@layout/fragment_indirect_form" />
+</navigation>

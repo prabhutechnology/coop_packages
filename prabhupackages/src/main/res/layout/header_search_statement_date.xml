@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.cardview.widget.CardView
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/transparent_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/text_view_hint_from"
+            android:layout_width="wrap_content"
+            android:text="@string/from"
+            app:layout_constraintEnd_toStartOf="@id/text_view_date_from"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingStart="0dp"
+            app:layout_constraintWidth_max="@dimen/margin_70"
+            android:paddingVertical="@dimen/margin_5"
+            app:layout_constraintBottom_toBottomOf="@id/text_view_date_from"
+            android:textColor="@color/colorBlack"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/text_view_date_from"
+            android:paddingVertical="@dimen/margin_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_view_hint_from"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:text="@string/_2072_01_02"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_5"
+            android:drawablePadding="@dimen/margin_20"
+            android:background="@drawable/text_date_background"
+            app:layout_constraintEnd_toStartOf="@id/text_view_hint_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:drawableEndCompat="@drawable/ic_calendar" />
+         <TextView
+            app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toEndOf="@id/text_view_date_from"
+            android:id="@+id/text_view_hint_to"
+            android:layout_width="wrap_content"
+             android:gravity="end"
+            android:text="@string/to"
+            android:paddingEnd="@dimen/margin_10"
+             android:layout_marginStart="@dimen/margin_10"
+            android:paddingStart="0dp"
+             app:layout_constraintWidth_max="@dimen/margin_70"
+            android:paddingVertical="@dimen/margin_5"
+             app:layout_constraintEnd_toStartOf="@id/text_view_date_to"
+            app:layout_constraintBottom_toBottomOf="@id/text_view_date_to"
+            android:textColor="@color/colorBlack"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/text_view_date_to"
+            android:paddingVertical="@dimen/margin_5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_view_hint_to"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:text="@string/_2072_01_02"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_5"
+            android:drawablePadding="@dimen/margin_20"
+            android:background="@drawable/text_date_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:drawableEndCompat="@drawable/ic_calendar" />
+
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/text_view_date_from"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:id="@+id/button_view_statement"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/view_statement"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

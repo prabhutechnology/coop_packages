@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/margin_5"
+        app:cardCornerRadius="@dimen/margin_10">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingVertical="@dimen/margin_5"
+            android:paddingHorizontal="@dimen/margin_10"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/todaysTotalCollectionText"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:paddingHorizontal="@dimen/margin_10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/today_s_total_collection"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/balanceText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:textColor="@color/colorBlack"
+                android:paddingHorizontal="@dimen/margin_5"
+                app:layout_constraintEnd_toStartOf="@id/valueEyes"
+                android:text="XXX.XX"
+                android:textSize="@dimen/text_14"
+                android:paddingVertical="@dimen/margin_5"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/valueEyes"
+                android:contentDescription="@string/show_or_hide_the_balance"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:background="@drawable/ic_baseline_visibility_24"
+                android:backgroundTint="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_starter_activity"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splash_app_update"
+            app:destination="@id/appUpdateFragment"
+            app:popUpTo="@id/nav_starter_activity" />
+        <action
+            android:id="@+id/action_splash_to_authentication"
+            app:destination="@id/authenticationFragment"
+            app:popUpTo="@id/nav_starter_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appUpdateFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.AppUpdateFragment"
+        android:label="AppUpdateFragment"
+        tools:layout="@layout/fragment_app_update">
+        <argument
+            android:name="isForced"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <argument
+            android:name="features"
+            android:defaultValue="Latest updates and bug fixes"
+            app:argType="string" />
+        <argument
+            android:name="noExit"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.AuthenticationFragment"
+        android:label="fragment_authentication"
+        tools:layout="@layout/fragment_authentication" />
+</navigation>

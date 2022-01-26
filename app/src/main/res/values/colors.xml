@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C31B22</color>
+    <color name="colorPrimaryDark">#C31B22</color>
+    <color name="colorAccent">#C31B22</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="background">#F0F0F0</color>
+    <color name="colorDeam">#fff3f3</color>
+
+    <color name="unactive">#D37171</color>
+
+    <color name="cardbg">#FFF7F7</color>
+    <color name="barview">#F1AEAE</color>
+    <color name="activetext">#B71C1C</color>
+    <color name="gray">#e3e3e3</color>
+    <color name="darkGray">#e0e0e0</color>
+    <color name="diabledtext">#7A7A7A</color>
+    <color name="cardGray">#F6F6F6</color>
+
+    <color name="darkSeparator">#898989</color>
+    <color name="grey_01">#aaaaaa</color>
+
+    <color name="kycVerifiedGreen">#ADDB31</color>
+    <color name="kycPendingWheat">#F7B967</color>
+    <color name="kycRejectedRed">#D31820</color>
+    <color name="kycNotFilledGray">#848484</color>
+
+    <color name="edittextUnderline">#D5D5D5</color>
+    <color name="colorGray">#B9B9B9</color>
+    <color name="colorLightGray">#cecece</color>
+    <color name="colorYellow">#F5DE12</color>
+    <color name="notificationYellow">#FF9900</color>
+    <color name="green2">#17C574</color>
+    <color name="colorGreen">#49e749</color>
+    <color name="backgrey">#f5f5f5</color>
+    <color name="colorGrey">#f5f5f5</color>
+
+    <color name="seat_available">#17C574</color>
+    <color name="seat_selected">#FFDF60</color>
+    <color name="seat_booked">#13C1E3</color>
+    <color name="seat_sold_out">#C31B22</color>
+    <color name="seat_unavailable">#000000</color>
+    <color name="grey">#EEEEEE</color>
+    <color name="hard_grey">#F0F0F0</color>
+    <color name="background_darkgrey">#F0F0F0</color>
+    <color name="backgroundLight">#f9f9f9</color>
+    <color name="editTextUnderline">#D5D5D5</color>
+    <color name="card_background">#EAEAEA</color>
+    <color name="page_background">#EAEAF0</color>
+
+    <color name="sold_out">#F0F0F0</color>
+    <color name="sold_out_text">#353535</color>
+
+    <color name="faintGray">#F5F5F5</color>
+    <color name="cashbackGreen">#4CAF50</color>
+    <color name="colorDarkGray">#989898</color>
+    <color name="lightText">#A7A7A7</color>
+    <color name="darkText">#3D3D3D</color>
+
+    <color name="bus_available">#AFAFAF</color>
+    <color name="bus_booked">#D80D0D</color>
+    <color name="bus_selected">#FE860E</color>
+    <color name="transparent_black_overlay">#22000000</color>
+    <color name="transparent_black_overlay_hard">#44000000</color>
+    <color name="transparent_white">#22FFFFFF</color>
+    <color name="transparent_white2">#00000000</color>
+    <color name="loadingGrey">#e0e0e0</color>
+    <color name="txn_success_text_color">#15BC15</color>
+    <color name="txn_success_out_text_color">#15BC15</color>
+    <color name="txn_failed_text_color">#F50303</color>
+    <color name="txn_failed_out_text_color">#F50303</color>
+    <color name="txn_pending_text_color">#424242</color>
+    <color name="grey_light">#CCCCCC</color>
+    <color name="black_light">#777575</color>
+    <color name="primaryTranslucent">#11C31B22</color>
+    <color name="primaryLight">#F8EDED</color>
+
+    <color name="carouselStroke">#FFD7D7</color>
+
+    <color name="colorEventAvailable">#ee4CAF50</color>
+    <color name="colorEventSoldOut">#eeC31B22</color>
+    <color name="linkColor">#0D91E4</color>
+    <color name="defaultTextColor">#808080</color>
+    <color name="inactive">#a6a6a6</color>
+    <color name="shimmerColor">#949797</color>
+    <color name="text_date_background">#47C4C4C4</color>
+</resources>

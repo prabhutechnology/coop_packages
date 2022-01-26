@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/requestChequeFragment"
+        android:icon="@drawable/ic_request_cheque"
+        android:title="@string/request_cheque" />
+    <item
+        android:id="@+id/requestDebitCard"
+        android:checked="false"
+        android:icon="@drawable/ic_credit_card"
+        android:title="@string/request_debit_card" />
+    <item
+        android:id="@+id/complainFragment"
+        android:checked="false"
+        android:icon="@drawable/ic_complain"
+        android:title="@string/complain" />
+    <item
+        android:id="@+id/activity_log"
+        android:checked="false"
+        android:icon="@drawable/ic_activitylog"
+        android:title="@string/activity_log" />
+    <item
+        android:id="@+id/settings"
+        android:checked="false"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/changePassword"
+        android:checked="false"
+        android:icon="@drawable/ic_changepassword"
+        android:title="@string/change_password" />
+    <item
+        android:id="@+id/logout"
+        android:checked="false"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout" />
+</menu>

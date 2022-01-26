@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_pins"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/pinLayout"
+            app:layout_constraintEnd_toEndOf="@+id/pinLayout"
+            app:layout_constraintStart_toStartOf="@+id/pinLayout"
+            app:layout_constraintTop_toTopOf="@+id/pinLayout"
+            app:layout_constraintWidth_max="200dp">
+
+            <View
+                android:id="@+id/pin_1"
+                android:layout_width="@dimen/pin_input_size"
+                android:layout_height="@dimen/pin_input_size"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/pin_input_inactive"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/pin_2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/pin_2"
+                android:layout_width="@dimen/pin_input_size"
+                android:layout_height="@dimen/pin_input_size"
+                android:background="@drawable/pin_input_inactive"
+                app:layout_constraintBottom_toBottomOf="@+id/pin_1"
+                app:layout_constraintEnd_toStartOf="@+id/pin_3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pin_1"
+                app:layout_constraintTop_toTopOf="@+id/pin_1" />
+
+            <View
+                android:id="@+id/pin_3"
+                android:layout_width="@dimen/pin_input_size"
+                android:layout_height="@dimen/pin_input_size"
+                android:background="@drawable/pin_input_inactive"
+                app:layout_constraintBottom_toBottomOf="@+id/pin_2"
+                app:layout_constraintEnd_toStartOf="@+id/pin_4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pin_2"
+                app:layout_constraintTop_toTopOf="@+id/pin_2" />
+
+            <View
+                android:id="@+id/pin_4"
+                android:layout_width="@dimen/pin_input_size"
+                android:layout_height="@dimen/pin_input_size"
+                android:background="@drawable/pin_input_inactive"
+                app:layout_constraintBottom_toBottomOf="@+id/pin_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pin_3"
+                app:layout_constraintTop_toTopOf="@+id/pin_3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pinDotsLayout"
+            style="@style/InputFieldLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/InputFieldLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@android:color/transparent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pinDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/edittextUnderline"
+                android:textAlignment="center"
+                android:longClickable="false"
+                android:clickable="false"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:textColor="@android:color/transparent"
+                android:textCursorDrawable="@drawable/transparent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pinLayout"
+            style="@style/InputFieldLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/InputFieldLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edittextUnderline"
+                android:inputType="numberPassword"
+                android:maxLength="4" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

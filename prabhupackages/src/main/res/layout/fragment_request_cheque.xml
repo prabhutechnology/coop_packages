@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wallet.activities.landingactivity.fragments.RequestChequeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_padding_16"
+        app:cardCornerRadius="@dimen/general_padding_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_view_delivery_branch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Delivery Branch"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.prabhutech.coop.wallet.views.DropdownViews
+                android:id="@+id/drop_down_delivery_branch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:hint="Delivery Branch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_delivery_branch" />
+
+            <TextView
+                android:id="@+id/text_view_no_of_cheques"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No. of Cheques"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drop_down_delivery_branch" />
+
+            <com.prabhutech.coop.wallet.views.DropdownViews
+                android:id="@+id/drop_down_no_of_cheques"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_no_of_cheques" />
+
+            <com.prabhutech.coop.wallet.core.utils.customviews.DatePickerView
+                android:id="@+id/datePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/general_padding_16"
+                app:extra="simple"
+                app:iconEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/drop_down_no_of_cheques"
+                app:required="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_padding_16"
+        android:background="@drawable/btn_shape_12"
+        android:text="Submit"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView13" />
+
+    <Button
+        android:id="@+id/anim_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_padding_16"
+        android:background="#00000000"
+        android:text="Cancel"
+        android:textColor="@color/colorBlack"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_submit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/general_padding_16"
+        tools:context=".wallet.activities.landingactivity.fragments.form.IndirectFormFragment">
+
+        <include
+            android:id="@+id/dynamic_text_input_layout_username"
+            layout="@layout/dynamic_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/dynamic_text_input_layout_customer_id"
+            layout="@layout/dynamic_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dynamic_text_input_layout_username" />
+
+        <include
+            android:id="@+id/dynamic_text_input_layout_mobile_number"
+            layout="@layout/dynamic_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dynamic_text_input_layout_customer_id" />
+
+        <include
+            android:id="@+id/dynamic_text_input_layout_amount"
+            layout="@layout/dynamic_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dynamic_text_input_layout_mobile_number" />
+
+        <include
+            android:id="@+id/dynamic_btn_see_details"
+            layout="@layout/dynamic_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dynamic_text_input_layout_amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

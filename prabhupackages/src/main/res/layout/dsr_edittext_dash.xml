@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/margin_5"
+    android:layout_margin="@dimen/margin_5"
+    app:cardElevation="@dimen/margin_5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_search_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/searchText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/margin_20"
+            android:paddingVertical="@dimen/margin_5"
+            android:text="Search your code here"
+            android:textSize="@dimen/default_text"
+            app:layout_constraintEnd_toStartOf="@id/dropSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/dropSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_5"
+            android:background="@drawable/ic_arrow_drop_down_black"
+            android:backgroundTint="@color/grey_01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

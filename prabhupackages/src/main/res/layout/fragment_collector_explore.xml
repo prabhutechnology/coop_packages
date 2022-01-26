@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:context=".wallet.activities.collectorlandingactivity.fragments.CollectorExploreFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/header_collector"
+                layout="@layout/collector_header_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/general_padding_8"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/layout_collection"
+                layout="@layout/total_collection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/general_padding_16"
+                android:layout_marginVertical="@dimen/margin_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_collector" />
+
+            <RelativeLayout
+                android:id="@+id/layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/general_padding_8"
+                android:layout_marginTop="@dimen/general_padding_16"
+                android:layout_marginBottom="@dimen/general_padding_8"
+                android:paddingHorizontal="@dimen/general_padding_16"
+                android:paddingVertical="@dimen/margin_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_collection">
+
+                <TextView
+                    android:id="@+id/text_view_recent_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/text_view_cbs_sync_button"
+                    android:text="@string/recent_transaction"
+                    android:textSize="@dimen/text_14" />
+
+                <TextView
+                    android:id="@+id/text_view_cbs_sync_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawableStart="@drawable/ic_sync_icon"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:text="@string/cbs_sync"
+                    android:visibility="visible"
+                    app:drawableStartCompat="@drawable/ic_sync_icon"
+                    tools:ignore="RelativeOverlap" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_frame_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    app:shimmer_direction="right_to_left"
+                    app:shimmer_duration="1200"
+                    app:shimmer_highlight_alpha="0.7"
+                    app:shimmer_tilt="45"
+                    app:shimmer_width_ratio="4">
+
+                    <TextView
+                        android:id="@+id/text_view_cbs_sync_button_shimmer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_sync_icon"
+                        android:drawablePadding="@dimen/margin_10"
+                        android:text="@string/cbs_sync"
+                        app:drawableStartCompat="@drawable/ic_sync_icon"
+                        tools:ignore="RelativeOverlap" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_load_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:nestedScrollingEnabled="true"
+                android:paddingHorizontal="@dimen/margin_6"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_info"
+                tools:listitem="@layout/recent_transaction_card_ui" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_radius">12dp</dimen>
+    <dimen name="general_padding_16">16dp</dimen>
+    <dimen name="general_radius">16dp</dimen>
+    <dimen name="general_padding_32">32dp</dimen>
+    <dimen name="general_padding_8">8dp</dimen>
+    <dimen name="general_padding_64">64dp</dimen>
+    <dimen name="general_padding_24">24dp</dimen>
+
+    <dimen name="elevation01">2dp</dimen>
+    <dimen name="toolbar_default_elevation">0dp</dimen>
+
+    <dimen name="text_size_smallest">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+
+    <dimen name="icon_size_average">38dp</dimen>
+    <dimen name="general_padding_2">2dp</dimen>
+    <dimen name="general_padding_4">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="btn_radius">50dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="text_size_headline">18dp</dimen>
+    <dimen name="general_padding_48">48dp</dimen>
+    <dimen name="icon_med_size">62dp</dimen>
+    <dimen name="form_spacing">8dp</dimen>
+    <dimen name="spinner_height">28dp</dimen>
+    <dimen name="button_small">200dp</dimen>
+    <dimen name="small_radius">8dp</dimen>
+    <dimen name="badge_radius">4dp</dimen>
+    <dimen name="settings_page_text_size">14sp</dimen>
+    <dimen name="movie_item_height">240dp</dimen>
+
+    <dimen name="form_first_item_margin">24dp</dimen>
+    <dimen name="form_left_right_margin">16dp</dimen>
+
+    <dimen name="pin_input_size">18dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="default_text">12sp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_70">70dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="value"
+            type="String" />
+
+        <variable
+            name="afterTextChanged"
+            type="androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/general_padding_8">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_dynamic"
+            style="@style/InputFieldLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:theme="@style/InputFieldLayout2"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/image_button_show_contact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_edit_text_dynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:afterTextChanged="@{afterTextChanged}"
+                android:hint="@string/mobile_number"
+                android:imeOptions="actionGo"
+                android:inputType="number"
+                android:maxLength="10"
+                android:text="@={value}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/image_button_own_number"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/margin_40"
+            android:background="@drawable/ic_mobile"
+            android:contentDescription="@string/contactfetch_contacts_CD"
+            app:layout_constraintBottom_toBottomOf="@+id/text_input_layout_dynamic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/image_button_show_contact"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/margin_40"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/ic_contact"
+            android:contentDescription="@string/contactfetch_mynumber_CD"
+            app:layout_constraintBottom_toBottomOf="@+id/text_input_layout_dynamic"
+            app:layout_constraintEnd_toStartOf="@+id/image_button_own_number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

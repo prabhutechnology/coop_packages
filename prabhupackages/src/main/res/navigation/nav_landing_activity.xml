@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_landing_activity"
+    app:startDestination="@id/exploreFragment">
+
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.ExploreFragment"
+        android:label="Explore Fragment"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_explore_to_coming_soon"
+            app:destination="@id/comingSoon" />
+        <action
+            android:id="@+id/action_explore_to_my_account"
+            app:destination="@id/myAccountFragment" />
+        <action
+            android:id="@+id/action_explore_to_service_list"
+            app:destination="@id/serviceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestChequeFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.RequestChequeFragment"
+        android:label="Request Cheque"
+        tools:layout="@layout/fragment_request_cheque" />
+    <fragment
+        android:id="@+id/complainFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.ComplainFragment"
+        android:label="Complain"
+        tools:layout="@layout/fragment_complain" />
+    <fragment
+        android:id="@+id/comingSoon"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.ComingSoonFragment"
+        android:label="Coming Soon"
+        tools:layout="@layout/fragment_coming_soon" />
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.myaccount.MyAccountFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_my_account">
+        <action
+            android:id="@+id/action_my_account_to_request_cheque"
+            app:destination="@id/requestChequeFragment" />
+        <action
+            android:id="@+id/action_my_account_to_statement"
+            app:destination="@id/statementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.statement.StatementFragment"
+        android:label="Statement"
+        tools:layout="@layout/fragment_statement" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.notification.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/qrScanFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.qrscan.QRScanFragment"
+        android:label="QR Scan"
+        tools:layout="@layout/fragment_q_r_scan" />
+    <fragment
+        android:id="@+id/serviceListFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.servicelist.ServiceListFragment"
+        android:label="Service List"
+        tools:layout="@layout/fragment_service_list">
+        <argument
+            android:name="serviceListName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_service_list_to_comingSoon"
+            app:destination="@id/comingSoon" />
+        <!--To product list-->
+        <action
+            android:id="@+id/action_service_list_to_product_list"
+            app:destination="@id/productListFragment" />
+        <!--Direct Form Fragment-->
+        <action
+            android:id="@+id/action_service_list_to_form"
+            app:destination="@id/formFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.productlist.ProductListFragment"
+        android:label="Form"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_product_list_to_form"
+            app:destination="@id/formFragment"
+            app:popUpTo="@id/productListFragment" />
+        <action
+            android:id="@+id/action_product_list_to_coming_soon"
+            app:destination="@id/comingSoon" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.detail.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_to_showResultFragment"
+            app:destination="@id/showResultFragment"
+            app:popUpTo="@id/exploreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showResultFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.ShowResultFragment"
+        android:label="Show Result"
+        tools:layout="@layout/fragment_show_result">
+        <argument
+            android:name="resultMessage"
+            app:argType="string" />
+        <argument
+            android:name="resultDetail"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.form.FormFragment"
+        android:label="Form"
+        tools:layout="@layout/fragment_form">
+        <action
+            android:id="@+id/action_form_to_show_result"
+            app:destination="@id/showResultFragment"
+            app:popUpTo="@id/exploreFragment" />
+        <action
+            android:id="@+id/action_form_to_detail"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="ServiceLabel"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="ProductId"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="ProductLabel"
+            android:defaultValue=""
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

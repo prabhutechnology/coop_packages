@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.InputType" />
+
+        <variable
+            name="mobileNumber"
+            type="String" />
+
+        <variable
+            name="topUpViewModel"
+            type="com.prabhutech.coop.wallet.activities.landingactivity.fragments.topup.TopUpViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/general_padding_8"
+            tools:context=".wallet.activities.landingactivity.fragments.topup.TopUpFragment">
+
+            <include
+                android:id="@+id/text_input_layout_dynamic_phone_number"
+                layout="@layout/dynamic_text_input_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                app:afterTextChanged="@{(editable) -> topUpViewModel.onPhoneNumberAfterTextChanged(editable)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:value="@={topUpViewModel.mobileNumber}" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_sim_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_dynamic_phone_number"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/text_view_sim_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/general_padding_8"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    tools:text="SIM TYPE" />
+
+            </androidx.cardview.widget.CardView>
+
+            <include
+                android:id="@+id/text_input_layout_dynamic_amount"
+                layout="@layout/dynamic_text_input_normal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                app:afterTextChanged="@{(editable) -> topUpViewModel.onAmountAfterTextChanged(editable)}"
+                app:hintText="@{@string/amount}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_sim_type"
+                app:maxValueLength="@{7}"
+                app:textType="@{InputType.TYPE_CLASS_NUMBER}"
+                app:value="@={topUpViewModel.amount}" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="#FEF3F3"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="@dimen/general_padding_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_layout_dynamic_amount">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/note"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/you_can_topup_following_services"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:text="@string/topup_note"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/btn_top_up_now"
+                layout="@layout/dynamic_anim_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/general_padding_32"
+                app:buttonText="@{@string/top_up}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:onButtonClick="@{()->topUpViewModel.onTopUpClicked()}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

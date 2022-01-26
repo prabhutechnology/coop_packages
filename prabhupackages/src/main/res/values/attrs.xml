@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EmailPhoneInputView" />
+
+    <declare-styleable name="FormInputView">
+        <attr name="hint" format="string" />
+        <attr name="errorText" format="string" />
+        <attr name="required" format="boolean" />
+        <attr name="extra" format="string" />
+        <attr name="iconEnabled" format="boolean" />
+        <attr name="underlineColor" format="color" />
+
+        <attr name="min" format="integer" />
+        <attr name="max" format="integer" />
+
+        <attr name="inputType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="person_name" value="1" />
+            <enum name="address" value="3" />
+            <enum name="number" value="4" />
+            <enum name="price" value="5" />
+            <enum name="alpha_numeric" value="6" />
+            <enum name="dropdown" value="7" />
+            <enum name="url" value="8" />
+            <enum name="mobile" value="9" />
+            <enum name="landline" value="10" />
+            <enum name="email" value="11" />
+            <enum name="phone" value="12" />
+            <enum name="ward" value="13" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ContactFetchInput">
+
+        <attr name="contact_title" format="string" />
+        <attr name="contact_fetch_required" format="string" />
+        <attr name="contact_inputType" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="PinInput">
+        <attr name="pin_hint" format="string" />
+        <attr name="length" format="integer" />
+        <attr name="mode" format="enum">
+            <enum name="edittext" value="0" />
+            <enum name="dots" value="1" />
+            <enum name="blocks" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ContactFetchWithIndicator">
+        <attr name="contact_hint" format="string" />
+        <attr name="contact_required" format="boolean" />
+        <attr name="contact_titles" format="string" />
+        <attr name="contact_inputTypes" format="string" />
+        <attr name="contact_handler" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="AnimButton">
+        <attr name="text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DateView">
+        <attr name="default_year" format="string" />
+        <attr name="default_month" format="string" />
+        <attr name="default_day" format="string" />
+        <attr name="fixed_format" format="boolean" />
+        <attr name="default_format" format="enum">
+            <enum name="AD" value="0" />
+            <enum name="BS" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CheckboxGroup">
+        <attr name="default_title" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="RadioGroupV">
+        <attr name="radio_default_title" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_collector_landing_activity"
+    app:startDestination="@id/collectorExploreFragment">
+    <fragment
+        android:id="@+id/collectorExploreFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.collectorlandingactivity.fragments.CollectorExploreFragment"
+        android:label="Collector Explore Fragment"
+        tools:layout="@layout/fragment_collector_explore">
+        <action
+            android:id="@+id/action_collector_landing_to_coming_soon"
+            app:destination="@id/comingSoonCollectorFragment" />
+        <action
+            android:id="@+id/action_collector_landing_to_amount_collection"
+            app:destination="@id/amountCollectionFragment" />
+        <action
+            android:id="@+id/action_collectorExploreFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_collectorExploreFragment_to_collectorAccountStatementFragment"
+            app:destination="@id/collectorAccountStatementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/comingSoonCollectorFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.ComingSoonFragment"
+        android:label="Coming Soon"
+        tools:layout="@layout/fragment_coming_soon" />
+    <fragment
+        android:id="@+id/amountCollectionFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.collectorlandingactivity.fragments.amountcollection.AmountCollectionFragment"
+        android:label="Amount Collection"
+        tools:layout="@layout/fragment_amount_collection">
+        <action
+            android:id="@+id/action_amountCollectionFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_amountCollectionFragment_to_collectorExploreFragment"
+            app:destination="@id/collectorExploreFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/collectorExploreFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.collectorlandingactivity.fragments.searchs.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_collectorExploreFragment"
+            app:destination="@id/collectorExploreFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_amountCollectionFragment"
+            app:destination="@id/amountCollectionFragment" />
+        <argument
+            android:name="names"
+            app:argType="string[]" />
+        <!--TODO: Ask Anish dai before removing-->
+        <!--<argument
+            android:name="fragmentID"
+            app:argType="integer" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/collectorAccountStatementFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.collectorlandingactivity.fragments.statements.CollectorAccountStatementFragment"
+        android:label="Account Statement"
+        tools:layout="@layout/fragment_collector_account_statement" />
+    <fragment
+        android:id="@+id/qrScanFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.fragments.qrscan.QRScanFragment"
+        android:label="QR Scan"
+        tools:layout="@layout/fragment_q_r_scan" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.notification.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification" />
+</navigation>

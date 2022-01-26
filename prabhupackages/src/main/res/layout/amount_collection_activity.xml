@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/headerDataLayout"
+                layout="@layout/header_amount_collection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/general_padding_16"
+                android:layout_marginVertical="@dimen/margin_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_20"
+                android:layout_marginVertical="@dimen/margin_40"
+                app:cardCornerRadius="@dimen/margin_10"
+                app:cardElevation="@dimen/margin_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerDataLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/ic_search"
+                        android:drawablePadding="@dimen/margin_20"
+                        android:paddingHorizontal="@dimen/margin_20"
+                        android:text="@string/search_member" />
+
+                    <Button
+                        android:id="@+id/searchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/colorPrimary"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:minWidth="100dp"
+                        android:text="@string/search"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/displaySelectedData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_20"
+                android:layout_marginVertical="@dimen/margin_40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchCardView">
+
+                <include
+                    android:id="@+id/layout_member_name"
+                    layout="@layout/name_list_search_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <include
+                    android:id="@+id/layout_member_account_number"
+                    layout="@layout/name_list_search_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/layout_member_name"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <include
+                    android:id="@+id/layout_member_account_scheme"
+                    layout="@layout/name_list_search_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/layout_member_account_number"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <include
+                    android:id="@+id/layout_member_available_balance"
+                    layout="@layout/name_list_search_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/layout_member_account_scheme"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <include
+                    android:id="@+id/layout_member_status"
+                    layout="@layout/name_list_search_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/layout_member_available_balance"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/edit_text_enter_amount"
+                    app:layout_constraintTop_toBottomOf="@id/layout_member_status"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginHorizontal="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:inputType="numberDecimal"
+                    android:hint="Enter Collection Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.prabhutech.prabhupackages.wallet.views.AnimButton
+                    app:layout_constraintTop_toBottomOf="@id/edit_text_enter_amount"
+                    android:id="@+id/saveCollectionAmount"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:text="@string/save" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

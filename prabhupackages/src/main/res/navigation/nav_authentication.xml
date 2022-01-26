@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_authentication"
+    app:startDestination="@id/authLoginFragment">
+
+    <fragment
+        android:id="@+id/authLoginFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_recover"
+            app:destination="@id/recoverAccountFragment"
+            app:enterAnim="@anim/slide_left_in"
+            app:exitAnim="@anim/slide_right_out"
+            app:popEnterAnim="@anim/slide_right_in"
+            app:popExitAnim="@anim/slide_left_out"
+            app:popUpTo="@id/authLoginFragment" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_left_in"
+            app:exitAnim="@anim/slide_right_out"
+            app:popEnterAnim="@anim/slide_right_in"
+            app:popExitAnim="@anim/slide_left_out"
+            app:popUpTo="@id/authLoginFragment" />
+        <action
+            android:id="@+id/action_login_to_landing_activity"
+            app:destination="@id/landingActivity" />
+        <action
+            android:id="@+id/action_login_to_collector_landing_activity"
+            app:destination="@id/collectorLandingActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_verifyOTP"
+            app:destination="@id/verifyOTPFragment"
+            app:enterAnim="@anim/slide_left_in"
+            app:exitAnim="@anim/slide_right_out"
+            app:popEnterAnim="@anim/slide_right_in"
+            app:popExitAnim="@anim/slide_left_out"
+            app:popUpTo="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOTPFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.VerifyOTPFragment"
+        android:label="VerifyOTPFragment"
+        tools:layout="@layout/fragment_verify_o_t_p">
+        <action
+            android:id="@+id/action_verifyOTP_to_set_password"
+            app:destination="@id/setPasswordFragment"
+            app:enterAnim="@anim/slide_left_in"
+            app:exitAnim="@anim/slide_right_out"
+            app:popEnterAnim="@anim/slide_right_in"
+            app:popExitAnim="@anim/slide_left_out"
+            app:popUpTo="@id/verifyOTPFragment" />
+        <argument
+            android:name="OTPType"
+            app:argType="integer" />
+        <argument
+            android:name="mobileNumber"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/setPasswordFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.SetPasswordFragment"
+        android:label="SetPasswordFragment"
+        tools:layout="@layout/fragment_set_password">
+        <action
+            android:id="@+id/action_setPassword_to_getStarted"
+            app:destination="@id/getStartedFragment"
+            app:enterAnim="@anim/slide_left_in"
+            app:exitAnim="@anim/slide_right_out"
+            app:popEnterAnim="@anim/slide_right_in"
+            app:popExitAnim="@anim/slide_left_out"
+            app:popUpTo="@id/setPasswordFragment" />
+        <argument
+            android:name="mobileNumber"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.GetStartedFragment"
+        android:label="GetStartedFragment"
+        tools:layout="@layout/fragment_get_started">
+        <action
+            android:id="@+id/action_getStarted_to_login"
+            app:destination="@id/authLoginFragment"
+            app:enterAnim="@anim/slide_left_in"
+            app:exitAnim="@anim/slide_right_out"
+            app:popEnterAnim="@anim/slide_right_in"
+            app:popExitAnim="@anim/slide_left_out"
+            app:popUpTo="@id/nav_authentication"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/recoverAccountFragment"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.starteractivity.fragments.RecoverAccountFragment"
+        android:label="RecoverAccountFragment"
+        tools:layout="@layout/fragment_recover_account">
+        <action
+            android:id="@+id/action_recover_to_verifyOTP"
+            app:destination="@id/verifyOTPFragment"
+            app:enterAnim="@anim/slide_left_in"
+            app:exitAnim="@anim/slide_right_out"
+            app:popEnterAnim="@anim/slide_right_in"
+            app:popExitAnim="@anim/slide_left_out" />
+    </fragment>
+    <activity
+        android:id="@+id/landingActivity"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.landingactivity.LandingActivity"
+        android:label="activity_landing"
+        tools:layout="@layout/activity_landing" />
+    <activity
+        android:id="@+id/collectorLandingActivity"
+        android:name="com.prabhutech.prabhupackages.wallet.activities.collectorlandingactivity.CollectorLandingActivity"
+        android:label="activity_collector_landing"
+        tools:layout="@layout/activity_collector_landing" />
+</navigation>

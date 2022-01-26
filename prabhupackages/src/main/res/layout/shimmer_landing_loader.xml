@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_direction="bottom_to_top"
+        app:shimmer_duration="1200"
+        app:shimmer_highlight_alpha="0.7"
+        app:shimmer_tilt="45"
+        app:shimmer_width_ratio="4">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_10"
+            android:layout_marginVertical="@dimen/margin_5"
+            app:cardElevation="@dimen/margin_5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textAccountType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/account_type_background_one"
+                    android:backgroundTint="@color/shimmerColor"
+                    android:gravity="center"
+                    android:minWidth="@dimen/margin_50"
+                    android:minHeight="@dimen/margin_40"
+                    android:paddingHorizontal="@dimen/margin_16"
+                    android:text="@string/bal_bachat"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/verticalViewGuide"
+                    android:layout_width="1dp"
+                    android:layout_height="5dp"
+                    android:layout_marginStart="@dimen/margin_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textAccountName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/shimmerColor"
+                    android:text="@string/anish_maharjan"
+                    android:textColor="@color/shimmerColor"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@id/textAccountType"
+                    app:layout_constraintStart_toStartOf="@id/verticalViewGuide"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/horiViewGuide"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textAccountType" />
+
+                <TextView
+                    android:id="@+id/accountNumberHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/shimmerColor"
+                    android:text="@string/account_number"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintStart_toStartOf="@id/verticalViewGuide"
+                    app:layout_constraintTop_toBottomOf="@id/horiViewGuide" />
+
+
+                <TextView
+                    android:id="@+id/textAccountNumber"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/shimmerColor"
+                    android:gravity="end"
+                    android:text="@string/account_num"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/horiViewGuide" />
+
+                <TextView
+                    android:id="@+id/collectedAmountHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/shimmerColor"
+                    android:text="@string/collection_amount"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintStart_toStartOf="@id/verticalViewGuide"
+                    app:layout_constraintTop_toBottomOf="@id/accountNumberHint" />
+
+                <TextView
+                    android:id="@+id/textCollectedAmount"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/shimmerColor"
+                    android:gravity="end"
+                    android:text="@string/npr1000"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintEnd_toStartOf="@id/editAmounts"
+                    app:layout_constraintTop_toBottomOf="@id/textAccountNumber" />
+
+                <TextView
+                    android:id="@+id/editAmounts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/shimmerColor"
+                    android:text="@string/edits"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textAccountNumber" />
+
+                <TextView
+                    android:id="@+id/locationHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_6"
+                    android:background="@color/shimmerColor"
+                    android:drawablePadding="@dimen/margin_6"
+                    android:text="@string/location"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintBottom_toBottomOf="@id/viewGuideEdit"
+                    app:layout_constraintStart_toStartOf="@id/verticalViewGuide"
+                    app:layout_constraintTop_toBottomOf="@id/collectedAmountHint" />
+
+                <TextView
+                    android:id="@+id/textDateVisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_6"
+                    android:background="@color/shimmerColor"
+                    android:drawablePadding="@dimen/margin_6"
+                    android:gravity="end"
+                    android:text="@string/_2072_01_02"
+                    android:textColor="@color/shimmerColor"
+                    app:layout_constraintBottom_toBottomOf="@id/viewGuideEdit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textCollectedAmount" />
+
+                <View
+                    android:id="@+id/viewGuideEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textDateVisible" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

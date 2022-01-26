@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contact_fetch_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/contactName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/contact_input_holder"
+                                style="@style/InputFieldLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/InputFieldLayout">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/contact_input_contact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:autofillHints=""
+                                    android:backgroundTint="@color/edittextUnderline"
+                                    android:inputType="number"
+                                    android:saveEnabled="false"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:paddingTop="@dimen/general_padding_8">
+
+                                <ImageButton
+                                    android:id="@+id/contact_input_button"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/general_padding_8"
+                                    android:layout_marginEnd="0dp"
+                                    android:background="@drawable/ic_contact_list"
+                                    android:contentDescription="@string/contactfetch_contacts_CD" />
+
+                                <ImageButton
+                                    android:id="@+id/self_contact_button"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="right"
+                                    android:background="@drawable/ic_my_contact"
+                                    android:contentDescription="@string/contactfetch_mynumber_CD" />
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </FrameLayout>
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/general_padding_4"
+            android:layout_marginTop="-15dp"
+            android:layout_marginEnd="@dimen/general_padding_8">
+
+            <Button
+                android:id="@+id/btn_service_provider"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/circlebg"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="false"
+                android:paddingStart="@dimen/general_padding_16"
+                android:paddingEnd="@dimen/general_padding_16"
+                android:text="Operator"
+                android:textColor="@color/white_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/alertView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invalid_phone_format"
+                android:textColor="@color/colorPrimary" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</merge>

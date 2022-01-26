@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="hintText"
+            type="String" />
+
+        <variable
+            name="maxValueLength"
+            type="int" />
+
+        <variable
+            name="value"
+            type="String" />
+
+        <variable
+            name="textType"
+            type="Integer" />
+
+        <variable
+            name="afterTextChanged"
+            type="androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged" />
+    </data>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dynamic_text_input_normal_layout"
+        style="@style/InputFieldLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:hint="@{hintText}"
+        android:theme="@style/InputFieldLayout2"
+        app:errorEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dynamic_text_input_normal_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:afterTextChanged="@{afterTextChanged}"
+            android:imeOptions="actionGo"
+            android:inputType="@{textType}"
+            android:maxLength="@{maxValueLength}"
+            android:maxLines="1"
+            android:text="@={value}" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</layout>
